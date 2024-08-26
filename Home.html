@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Marketplace</title>
+    <link rel="stylesheet" href="farmy.css">
+</head>
+<body>
+    <header>
+        <h1>Crop Marketplace</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Buy Fresh Crops Directly from Farmers</h2>
+        <p>Your one-stop marketplace for organic and fresh produce</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-form">
+        <h2>Find Crops</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="state">Select State:</label>
+            <select id="state" name="state">
+                <option value="select">Select State</option>
+                <option value="andhra_pradesh">Andhra Pradesh</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="punjab">Punjab</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="uttar_pradesh">Uttar Pradesh</option>
+                <option value="west_bengal">West Bengal</option>
+                <!-- Add more states as needed -->
+            </select>
+
+            <label for="crop-category">Crop Category:</label>
+            <select id="crop-category" name="crop-category">
+                <option value="select">Select Category</option>
+                <option value="grains">Grains</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="spices">Spices</option>
+                <option value="pulses">Pulses</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <h2>Featured Products</h2>
+    <section class="products">
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Wheat">
+                <h3>Wheat</h3>
+                <p>$20 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Rice">
+                <h3>Rice</h3>
+                <p>$25 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Corn">
+                <h3>Corn</h3>
+                <p>$15 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Pulse">
+                <h3>Pulse</h3>
+                <p>$30 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Sugarcane">
+                <h3>Sugarcane</h3>
+                <p>$75 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Musturd">
+                <h3>Musturd</h3>
+                <p>$50 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Cabbage">
+                <h3>Cabbage</h3>
+                <p>$40 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Tomato">
+                <h3>Tomato</h3>
+                <p>$110 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Potato">
+                <h3>Potato</h3>
+                <p>$30 per bag</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <div id="foot">
+        <p>&copy; 2024 Crop Marketplace. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </div>
+    <footer>
+        <button id="chatbot">Chat me<!--img src="https://www.bing.com/images/search?view=detailV2&ccid=2uUBwCMF&id=7B2179354288A4A1E35E4616BFEB4D107D1F4750&thid=OIP.2uUBwCMFZ-RsdzqMpiX8kQAAAA&mediaurl=https%3a%2f%2fclipart.info%2fimages%2fccovers%2f1496184260Robot-Emoji-Png-transparent-background.png&exph=480&expw=458&q=robot+face+transparent+image&simid=608052715808949882&FORM=IRPRST&ck=9ACBB35DCC58D20B0D7D2D76923F98A6&selectedIndex=8&itb=1"--></button>
+    </footer>
+<style>
+        /* General Styles */
+*{
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+header {
+    height: 75px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0rem 0.5rem 1rem;
+    text-align: center;
+    font-family: Arial Rounded MT;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Arial Rounded MT;
+}
+
+nav{
+    width: auto;
+    display: grid;
+    margin: 0 0 2px 0; 
+    gap: space-between;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+nav ul li {
+    margin: 0 18px 2px 0;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #EAF8E6;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero button:hover {
+    background-color: #45a049;
+}
+
+/* Search Form Styles */
+.search-form {
+    padding: 2rem;
+    background-color: #ffffff;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form label {
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.search-form input, .search-form select {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+.search-form input:focus{
+    border: 0.5px solid #4CAF50;
+    outline: 1px solid #4c4c4c;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-form button:hover {
+    background-color: #45a049;
+}
+
+.products {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    overflow-x: scroll;
+    max-width: 99%;
+    text-align: center;
+    scrollbar-width: thin;
+    scrollbar-width: 2vw;
+    scrollbar-color: #4CAF50 transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.product-grid {
+    width: 2000px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.product-item button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.product-item button:hover {
+    background-color: #45a049;
+}
+
+#foot {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#foot ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#foot ul li {
+    margin: 0 10px;
+}
+
+#foot ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+footer{
+    background-color: red;
+}
+
+#chatbot{
+    height: 50px;
+    width: 50px;
+    background-color: Blue;
+    border: none;
+    border-radius: 100%;
+}
+
+</style>
+</body>
+</html>
