@@ -1,0 +1,56 @@
+<div id="Range Slider">
+    <label for="Price Range">Price Range</label>
+<br><br>
+    <input type="range" id="min-range" class="slider">
+    <input type="range" id="max-range" class="slider">
+<br>
+    ₹ <span id="min-value">00</span>.00
+    <label id="to">to</label>
+    ₹ <span id="max-value">00</span>.00
+</div>
+<style>
+div[id="Range Slider"]{
+    width: 80%;
+    font-family: Arial Rounded MT;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+label[for="Price Range"]{
+    font-size: 30;
+}
+span[id="min-value"],[id="max-value"]{
+    border-bottom: 1px solid black;
+}
+input[class="slider"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 5px;
+    max-width: 400px;
+    background-color: #dedede;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    float: left;
+}
+</style>
+
+<script>
+
+var minRange = document.getElementById('min-range');
+var maxRange = document.getElementById('max-range');
+var outputMin = document.getElementById('min-value');
+var outputMax = document.getElementById('max-value');
+
+outputMin.innerHTML = minRange.value;
+outputMax.innerHTML = maxRange.value;
+
+minRange.oninput = function(){
+    outputMin.innerHTML = this.value *1+250;
+}
+maxRange.oninput = function(){
+    outputMax.innerHTML = this.value *1+350;
+}
+
+</script>
