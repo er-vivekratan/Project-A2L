@@ -1,0 +1,108 @@
+<head><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <div id="form">
+        <h1>Login</h1>
+        <input type="text" class="form-input" required><label for="user_name" class="labelline">Name</label>
+        <br>
+        <select id="telcode">
+            <option value="+91">+91</option>
+        </select>
+        <input type="tel" maxlength="10"><label for="user_tel" class="labelline">Phone Number</label>
+        <br>
+        <input type="text" id="otp" placeholder="Enter OTP" value="" required>
+        <input type="button" id="verify" value="verify ?" onclick="getOTP()">
+        <br>
+        <select>
+            <option value="9" selected>Uttar Pradesh</option>
+        </select>
+        <br>
+        <select>
+            <option value="244412" selected>244412&nbsp&nbsp&nbspChandausi</option>
+        </select>
+        <input type="submit" id="submit" value="->">
+    </div>
+    </head>
+
+<style>
+
+div[id="form"]{
+    height: 550px;
+    width: 350px;
+    border: 1px solid black;
+    padding-left: 50px;
+    font-family: Cambria Math;
+}
+h1{
+    text-align: center;
+    font-family: Arial Rounded MT;
+    margin-left: -50px;
+}
+input,select{
+    height: 40px;
+    width: 300px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 0.99rem;
+    font-family: Cambria Math;
+    outline: none;
+}
+label{
+    transform: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    pointer-events: none;
+}
+.form input:focus~label,
+.form input:valid~label{
+    top: -10px;
+}
+select[id="telcode"]{
+    padding: 0;
+    width: 60px;
+    text-align: right;
+}
+input[type="tel"]{
+    width: 235px;
+}
+input[id="otp"]{
+    width: 210px;
+}
+input[id="verify"]{
+    height: 20px;
+    width: 47px;
+    padding: 0;
+    cursor: hand;
+    border: none;
+    margin-top: -40px;
+    background-color: transparent;
+    color: blue;
+    font-size: 18;
+}
+label{
+    margin-left: -290;
+}
+label[for="user_tel"]{
+    margin-left: -225px;
+}
+input[type="submit"]{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 0.5px solid #4CAF50;
+    background-color: #4CAF50;
+    text-align: center;
+    margin-left: 35%;
+}
+
+</style>
+
+<script>
+
+function getOTP(){
+    let value = '0123456789';
+    let newOTP = Math.floor(Math.random()*1000000);
+    document.getElementById('otp').value = newOTP;
+}
+
+</script>

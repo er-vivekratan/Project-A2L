@@ -1,0 +1,257 @@
+<div class="wrapper">
+    <div class="title">
+        <h1>Login</h1>
+        <h7>to Krishi Mitra</h7>
+    </div>
+    <div class="form-wrapper sign-in">
+        <form action="">
+            <div class="input-group">
+                <input type="text" id="username" required >
+                <label for="user">Username</label>
+            </div>
+            <div class="input-group">
+                <select id="telcode" style="float: left;">
+                    <option value="+91">+91</option>
+                    <option value="+231">+231</option>
+                </select>
+                <input type="tel" maxlength="10" id="usertel" required style="float: left; margin-left: 6px;">
+                <label for="tel">Phone Number</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="otp" placeholder="Enter OTP" value="" required style="margin-top: 25px;">
+                <input type="button" id="verify" value="verify ?" onclick="getOTP()">
+            </div>
+            <div class="input-group">
+                <select>
+                    <option value="9" class="option" selected>Uttar Pradesh</option>
+                </select>
+                <br>
+                <select style="margin-top: 25px;">
+                    <option value="244412" class="option" selected>244412&nbsp&nbsp&nbspChandausi</option>
+                </select>
+            </div>
+            <div class="login-type-pannel">
+                <label id="login-as">Login as: </label>
+                <label for="login-type">Coustomer</label>
+                <input type="checkbox" id="check"></input>
+                <label for="check" class="button"></label>
+                <label for="login-type">Merchant</label>
+            </div>
+            <button type="submit">Login</button>
+        <br><br>
+            <a href="#">Create Account</a>
+        <br>
+            <a href="#">forget password ?</a>
+        </form>
+    </div>
+</div>
+    
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    border: 0.1px solid;
+    padding: 40 40px 10px 40px;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    background-color:;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -10px;
+}
+div[class="title"]{
+    height: 70px;
+    width: 100%;
+    margin-bottom: -30px;
+    background-color:;
+}
+h1{
+    text-align: center;
+    font-family: Arial Rounded MT;
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 13px;
+}
+h7{
+    text-align: center;
+    margin-left: 27%;
+    font-family: Copperplate Gothic;
+}
+.input-group{
+    position: relative;
+    margin: 25px 0;
+    background-color: ;
+}
+.input-group label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    pointer-events: none;
+    cursor: pointer;
+    transition: 0.2s;
+    color: grey;
+    font-family: Cambria Math;
+}
+.input-group input, select{
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    font-family: Cambria Math;
+}
+select[id="telcode"]{
+    height: 40px;
+    padding: 0;
+    width: 60px;
+    font-size: 16;
+    text-align: right;
+}
+input[type="tel"]{
+    font-size: 16;
+    width: 235px;
+}
+label[for="tel"]{
+    left: 75;
+}
+input[id="otp"]{
+    width: 210px;
+}
+input[id="verify"]{
+    height: 20px;
+    width: 47px;
+    padding: 0;
+    cursor: hand;
+    border: none;
+    margin-top: -40px;
+    background-color: transparent;
+    color: blue;
+    font-size: 18;
+}
+.input-group input:focus{
+    outline: 10px rgb(76, 175, 80);
+}
+.input-group input:focus~label,
+.input-group input:valid~label{
+    font-size: 13px;
+    transform: translateY(-17px);
+}
+.option{
+    font-family: Cambria Math;
+    font-size: 15px;
+}
+div[class="login-type-pannel"]{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+label[id="login-as"]{
+    font-family: Arial Rounded MT;
+}
+label[for="login-type"]{
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Cambria Math;
+}
+input[type="checkbox"]{
+    display: none;
+}
+label[class="button"]{
+    background-color: #fff;
+    border: 1px solid red;
+    width: 25px;
+    height: 10px;
+    margin-top: 2px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    border: 1px solid ;
+}
+label[class="button"]::before{
+    position: absolute;
+    content: '';
+    background-color: #00f;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: -3px 0 0 -2px;
+    transition: 0.5s;
+}
+input:checked + .button{
+    background-color: #4CAF50;
+    transition: 0.5s;
+}
+input:checked + .button::before{
+    transform: translateX(100%);
+}
+button{
+    position: relative;
+    width: 50%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background-color: rgb(76, 175, 80);
+    border-radius: 15px;
+    font-size: 21;
+    cursor: hand;
+}
+a{
+    color: solid blue;
+    text-decoration: none;
+    font-size: 13;
+}
+
+</style>
+
+<script>
+
+function getOTP(){
+    let value = '0123456789';
+    let newOTP = Math.floor(Math.random()*1000000);
+    document.getElementById('otp').value = newOTP;
+}
+
+
+//const name = document.getElementById('username');
+const mob = document.getElementById('usertel');
+const OTP = document.getElementById('otp');
+
+form.addEventListener('submit', (e) => {
+    //let message = []
+    //if ( name.value === '' || name.value == null){
+        //console.log("Enter Username");
+    //}
+
+    if ( mob.value.length <= 10){
+        console.log("Enter valid Mobile Number");
+    }
+})
+    
+</script>
+
+
+</body>

@@ -68,7 +68,10 @@
         <label for="Price Range">Price Range</label>
     <br><br>
         <input type="range" id="min-range" class="slider">
-        <input type="range" id="max-range" class="slider">
+        <span>
+            <input type="range" id="max-range" class="slider">
+        </span>
+        
     <br>
         <span id="min-value"></span>
         <label id="to">-</label>
@@ -119,10 +122,10 @@
     outputMax.innerHTML = maxRange.value;
     
     minRange.oninput = function(){
-        outputMin.innerHTML = this.value *1+250;
+        outputMin.innerHTML = this.value *1+50;
     }
     maxRange.oninput = function(){
-        outputMax.innerHTML = this.value *1+350;
+        outputMax.innerHTML = this.value *1+150;
     }
     
 </script>

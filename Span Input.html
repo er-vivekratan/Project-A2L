@@ -1,0 +1,47 @@
+<input type="text" id="username" class="form-input" required></input>
+<label for="username" class="labelline">User Name</label>
+<input type="submit" value="Login" disabled></input>
+<style>
+
+body{
+    font-family: Convergence;
+}
+input[class="form-input"]{
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border: 0.1px solid black;
+    cursor: text;
+    padding: 0 15px;
+    font-size: 18;
+}
+label[class="labelline"]{
+    cursor: text;
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    background-color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 21;
+    transition: top 200ms ease-in,
+    left 200ms ease-in font-size 200ms ease-in;
+    pointer-events: none;
+}
+input[class="form-input"]:hover ~ label[class="labelline"]
+{
+    top: 0.09rem;
+    font-size: 1rem;
+    transition: top 20ms ease-in,
+    left 200ms ease-in font-size 200ms ease-in;
+}
+
+input[class="form-input"]:focus ~ 
+label[class="labelline"]
+{
+    top: 0.09rem;
+    font-size: 1rem;
+    transition: top 20ms ease-in,
+    left 200ms ease-in font-size 200ms ease-in;
+}
+
+</style>
