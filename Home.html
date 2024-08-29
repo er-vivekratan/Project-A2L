@@ -3,8 +3,8 @@
 </head>
 <body>
     <nav>
-        <input type="checkbox" id="menu">
-        <label for="menu" class="menubtn">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
             <i class="fas fa-bars" class="menubtn"></i>
             Menu
         </label>
@@ -39,10 +39,13 @@ nav{
     height: 80px;
     width: 100%;
 }
-input[id="menu"]{
-    display: none;
+input[id="check"]{
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    display: ;
 }
-.menubtn{
+.checkbtn{
     font-size: 18px;
     color: #fff;
     float: right;
@@ -61,7 +64,7 @@ input[id="menu"]{
     }
 }
 @media (max-width: 858px){
-    .menubtn{
+    .checkbtn{
         display: block;
     }
     ul{
@@ -90,8 +93,9 @@ input[id="menu"]{
         background-color: #000;
         color: #fff;
     }
-    #menu:checked ~ ul{
-        left: 0;
+    .check:checked ~ ul{
+        display: hidden;
+        background-color: #fff;
     }
 }
 label[class="logo"]{
@@ -121,11 +125,15 @@ a.active,a:hover{
     background: #1b641d;
     transition: 0.5s;
 }
-
+#check:checked ~ nav ul{
+    left: 0;
+    display: hidden;
+    background-color: #fff;
+}
 a[id="logout"]{
-    border: 1px solid red;
-    background-color: red;
-    color: #fff;
+    border: none;
+    background-color: rgb(161, 22, 22);
+    color: #ffffff;
     margin-right: -20px;
 }
 
