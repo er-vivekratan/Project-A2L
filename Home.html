@@ -8,18 +8,19 @@
             <i class="fas fa-bars" class="menubtn"></i>
             Menu
         </label>
-        <label class="logo">Krishi Mitra</label>
+        <img style ="height: 80%; margin: 0.7% 0 0 1%;" src="https://raw.githubusercontent.com/er-vivekratan/Project-A2L/main/Krishi%20Mitra%20Logo%20T.png">
+        <!--label class="logo">Krishi Mitra</label-->
         <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Chatbot</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">About</a></li>
-            <li><a id="logout" href="#">Logout</a></li>
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li><a href="Store.html">Store</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Chatbot.html">Chatbot</a></li>
+            <li><a href="Tools.html">Tools</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a id="logout" href="Krishak-Login.html">Logout</a></li>
         </ul>
     </nav>
-    <div class="page" style="height: calc(100vh - 80px); background-color: blue; background-size: cover;">
+    <div class="page">
 
     </div>
 <style>
@@ -35,13 +36,13 @@ body{
     font-family: Cambria Math;
 }
 nav{
-    background: #4caf50;
-    height: 80px;
+    background: #4CAF50;
+    height: 95px;
     width: 100%;
 }
 input[id="check"]{
     float: right;
-    line-height: 80px;
+    line-height: 95px;
     margin-right: 20px;
     display: none;
 }
@@ -49,7 +50,7 @@ input[id="check"]{
     font-size: 18px;
     color: #fff;
     float: right;
-    line-height: 80px;
+    line-height: 95px;
     margin-right: 20px;
     cursor: pointer;
     display: none;
@@ -74,7 +75,7 @@ input[id="check"]{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #509152;
+        background: #4CAF50;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -89,7 +90,7 @@ input[id="check"]{
         font-size: 17px;
     }
     a:hover, a.active{
-        background: #1b641d;
+        background: #007F5F;
         color: #fff;
     }
     #check:checked ~ ul{
@@ -107,7 +108,7 @@ input[id="check"]{
 label[class="logo"]{
     color: #fff;
     font-size: 35px;
-    line-height: 80px;
+    line-height: 95px;
     padding: 0 100px;
     font-weight: bold;
 }
@@ -117,7 +118,7 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 95px;
     margin: 0 5px;
 }
 nav ul li a{
@@ -128,7 +129,7 @@ nav ul li a{
     text-transform: uppercase;
 }
 a.active,a:hover{
-    background: #1b641d;
+    background: #007F5F;
     transition: 0.5s;
 }
 #check:checked ~ nav ul{
@@ -141,6 +142,167 @@ a[id="logout"]{
     background-color: rgb(161, 22, 22);
     color: #ffffff;
     margin-right: -20px;
+}
+
+
+div[class="page"]{
+    height: calc(100vh - 80px);
+    /*background-image: linear-gradient(to bottom, #59d65f, #80da84, #a6d6a9, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);*/
+    background-size: cover;
+}
+
+</style>
+</body><head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars" class="menubtn"></i>
+            Menu
+        </label>
+        <img style ="height: 80%; margin: 0.7% 0 0 1%;" src="https://raw.githubusercontent.com/er-vivekratan/Project-A2L/main/Krishi%20Mitra%20Logo%20T.png">
+        <!--label class="logo">Krishi Mitra</label-->
+        <ul>
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li><a href="Store.html">Store</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Chatbot.html">Chatbot</a></li>
+            <li><a href="Tools.html">Tools</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a id="logout" href="Krishak-Login.html">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="page">
+
+    </div>
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Cambria Math;
+}
+nav{
+    background: #4CAF50;
+    height: 95px;
+    width: 100%;
+}
+input[id="check"]{
+    float: right;
+    line-height: 95px;
+    margin-right: 20px;
+    display: none;
+}
+.checkbtn{
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    line-height: 95px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 858px){
+    label[class="logo"]{
+        font-size: 14;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4CAF50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+    a:hover, a.active{
+        background: #007F5F;
+        color: #fff;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    a[class="active"]{
+        background-color: none;
+        color: #fff;
+    }
+    .check:checked ~ ul{
+        display: hidden;
+        background-color: #fff;
+    }
+}
+label[class="logo"]{
+    color: #fff;
+    font-size: 35px;
+    line-height: 95px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 95px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: #007F5F;
+    transition: 0.5s;
+}
+#check:checked ~ nav ul{
+    left: 0;
+    display: hidden;
+    background-color: #fff;
+}
+a[id="logout"]{
+    border: none;
+    background-color: rgb(161, 22, 22);
+    color: #ffffff;
+    margin-right: -20px;
+}
+
+
+div[class="page"]{
+    height: calc(100vh - 80px);
+    /*background-image: linear-gradient(to bottom, #59d65f, #80da84, #a6d6a9, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff, #fff);*/
+    background-size: cover;
 }
 
 </style>
